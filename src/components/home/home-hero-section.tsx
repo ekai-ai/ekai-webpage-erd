@@ -35,7 +35,7 @@ export const HomeHeroSection = () => {
         <img src="/images/logos/ekai-logo.svg" alt="ekai" className='ekai-logo' />
       </div>
       <div className='nav-buttons'>
-        <a href="/contact#beta" className='nav-button try-beta-button'>Try Beta</a>
+        <a href="https://dev.ekai.ai" className='nav-button try-beta-button' target="_blank" rel="noopener noreferrer">Try Beta</a>
       </div>
       <div className='code-background'></div>
       <div className='hero-container'>
@@ -204,11 +204,11 @@ export const HomeHeroSection = () => {
 
         <div className='cta-section'>
           <div className='cta-group'>
-            <HashLink to='/contact#beta'>
+            <a href="https://dev.ekai.ai" target="_blank" rel="noopener noreferrer">
               <button className='primary-button'>
                 <span className='button-text'>Try Beta</span>
               </button>
-            </HashLink>
+            </a>
             <div className='sub-link'>
               <a href="/docs" className='docs-link'>
                 Read the Docs →
