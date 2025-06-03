@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from 'react'; 
 import { HomeHeroSection } from './components/home/home-hero-section'
 
 function App() {
