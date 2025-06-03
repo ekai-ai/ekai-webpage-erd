@@ -1,4 +1,8 @@
-#import React, { useEffect, useRef } from 'react'
+import React from 'react';
+// or if you use hooks:
+import React, { useState, useEffect } from 'react';
+
+// your code below
 import { HashLink } from 'react-router-hash-link'
 import './home-hero-section.less'
 
