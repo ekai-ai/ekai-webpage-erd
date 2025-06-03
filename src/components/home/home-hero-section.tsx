@@ -35,7 +35,6 @@ export const HomeHeroSection = () => {
         <img src="/images/logos/ekai-logo.svg" alt="ekai" className='ekai-logo' />
       </div>
       <div className='nav-buttons'>
-        <a href="/login" className='nav-button login-button'>Login</a>
         <a href="/contact#beta" className='nav-button try-beta-button'>Try Beta</a>
       </div>
       <div className='code-background'></div>
@@ -76,10 +75,12 @@ export const HomeHeroSection = () => {
               Instantly visualize database relationships across your entire data stack.
               No more manual diagramming or outdated documentation.
             </span>
-            <span className='feature-benefit'>
-              Save 2-3 months of engineering time
-            </span>
-            <span className='tech-spec'>Supports 10+ SQL dialects</span>
+            <div className='feature-bottom'>
+              <span className='feature-benefit'>
+                Save 2-3 months of engineering time
+              </span>
+              <span className='tech-spec'>Supports 10+ SQL dialects</span>
+            </div>
           </div>
           <div className='feature central-feature'>
             <span className='feature-icon'>🤖</span>
@@ -88,10 +89,12 @@ export const HomeHeroSection = () => {
               Turn your data stack into a knowledge graph for AI applications.
               Instant context for LLMs and analytics.
             </span>
-            <span className='feature-benefit'>
-              Deploy AI apps 5x faster
-            </span>
-            <span className='tech-spec'>Built on open standards</span>
+            <div className='feature-bottom'>
+              <span className='feature-benefit'>
+                Deploy AI apps 5x faster
+              </span>
+              <span className='tech-spec'>Built on open standards</span>
+            </div>
           </div>
           <div className='feature side-feature'>
             <span className='feature-icon'>📝</span>
@@ -100,10 +103,12 @@ export const HomeHeroSection = () => {
               Automatically document and catalog your SQL code across all platforms.
               Keep documentation in sync with your codebase.
             </span>
-            <span className='feature-benefit'>
-              Eliminate weeks of documentation work
-            </span>
-            <span className='tech-spec'>Auto-updates with your code</span>
+            <div className='feature-bottom'>
+              <span className='feature-benefit'>
+                Eliminate weeks of documentation work
+              </span>
+              <span className='tech-spec'>Auto-updates with your code</span>
+            </div>
           </div>
         </div>
 
@@ -122,82 +127,85 @@ export const HomeHeroSection = () => {
           </div>
         </div>
 
-        <div className='integrations'>
-          <p className='integration-text'>Works with your data stack</p>
-          <div className='integration-logos'>
-            <img 
-              src="/images/logos/snowflake.png" 
-              alt="Snowflake" 
-              className='logo'
-              onError={(e) => {
-                console.error('Failed to load Snowflake logo');
-                console.log('Attempted path:', e.currentTarget.src);
-              }} 
-            />
-            <img 
-              src="/images/logos/bigquery.png" 
-              alt="BigQuery" 
-              className='logo'
-              onError={(e) => {
-                console.error('Failed to load BigQuery logo');
-                console.log('Attempted path:', e.currentTarget.src);
-              }} 
-            />
-            <img 
-              src="/images/logos/databricks.png" 
-              alt="Databricks" 
-              className='logo'
-              onError={(e) => {
-                console.error('Failed to load Databricks logo');
-                console.log('Attempted path:', e.currentTarget.src);
-              }} 
-            />
-            <img 
-              src="/images/logos/redshift.png" 
-              alt="Amazon Redshift" 
-              className='logo'
-              onError={(e) => {
-                console.error('Failed to load Redshift logo');
-                console.log('Attempted path:', e.currentTarget.src);
-              }} 
-            />
-            <img 
-              src="/images/logos/postgres.png" 
-              alt="PostgreSQL" 
-              className='logo'
-              onError={(e) => {
-                console.error('Failed to load PostgreSQL logo');
-                console.log('Attempted path:', e.currentTarget.src);
-              }} 
-            />
+        {/* Integrations, Beta Tag, and Beta Features vertically centered */}
+        <div className='beta-section-wrapper'>
+          <div className='integrations'>
+            <p className='integration-text'>Works with your data stack</p>
+            <div className='integration-logos'>
+              <img 
+                src="/images/logos/snowflake.png" 
+                alt="Snowflake" 
+                className='logo'
+                onError={(e) => {
+                  console.error('Failed to load Snowflake logo');
+                  console.log('Attempted path:', e.currentTarget.src);
+                }} 
+              />
+              <img 
+                src="/images/logos/bigquery.png" 
+                alt="BigQuery" 
+                className='logo'
+                onError={(e) => {
+                  console.error('Failed to load BigQuery logo');
+                  console.log('Attempted path:', e.currentTarget.src);
+                }} 
+              />
+              <img 
+                src="/images/logos/databricks.png" 
+                alt="Databricks" 
+                className='logo'
+                onError={(e) => {
+                  console.error('Failed to load Databricks logo');
+                  console.log('Attempted path:', e.currentTarget.src);
+                }} 
+              />
+              <img 
+                src="/images/logos/redshift.png" 
+                alt="Amazon Redshift" 
+                className='logo'
+                onError={(e) => {
+                  console.error('Failed to load Redshift logo');
+                  console.log('Attempted path:', e.currentTarget.src);
+                }} 
+              />
+              <img 
+                src="/images/logos/postgres.png" 
+                alt="PostgreSQL" 
+                className='logo'
+                onError={(e) => {
+                  console.error('Failed to load PostgreSQL logo');
+                  console.log('Attempted path:', e.currentTarget.src);
+                }} 
+              />
+            </div>
           </div>
-        </div>
 
-        <div className='beta-tag'>
-          <span className='beta-icon'>🚀</span>
-          <span>Beta Launch Now Live</span>
-        </div>
+          <div className='beta-tag'>
+            <span className='beta-icon'>🚀</span>
+            <span>Beta Launch Now Live</span>
+          </div>
 
-        <div className='beta-features'>
-          <h3 className='beta-features-title'>Available in Beta:</h3>
-          <ul className='features-list'>
-            <li>
-              <span className='feature-icon'>📊</span>
-              Auto-generate ERDs on up to 20 tables
-            </li>
-            <li>
-              <span className='feature-icon'>🔗</span>
-              Link 50 tables to ekai ERD engine
-            </li>
-            <li>
-              <span className='feature-icon'>⬇️</span>
-              Export ERD as DBML or PNG
-            </li>
-            <li>
-              <span className='feature-icon'>📈</span>
-              Generate data profiles and quality signals
-            </li>
-          </ul>
+          <div className='beta-features'>
+            <h3 className='beta-features-title'>Available in Beta:</h3>
+            <ul className='features-list'>
+              <li>
+                <span className='feature-icon'>📊</span>
+                Auto-generate ERDs on up to 20 tables
+              </li>
+              <li>
+                <span className='feature-icon'>🔗</span>
+                Link 50 tables to ekai ERD engine
+              </li>
+              <li>
+                <span className='feature-icon'>⬇️</span>
+                Export ERD as DBML or PNG
+              </li>
+              <li>
+                <span className='feature-icon'>📈</span>
+                Generate data profiles and quality signals
+              </li>
+            </ul>
+          </div>
         </div>
 
         <div className='cta-section'>
@@ -221,7 +229,7 @@ export const HomeHeroSection = () => {
               </button>
             </HashLink>
             <div className='sub-link'>
-              <a href="/waitlist" className='waitlist-link'>
+              <a href="https://forms.gle/q3q1Fc3jjiwR9YPK7" className='waitlist-link' target="_blank" rel="noopener noreferrer">
                 Join the Waitlist →
               </a>
             </div>
