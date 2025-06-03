@@ -113,17 +113,10 @@ export const HomeHeroSection = () => {
         </div>
 
         <div className='stats-section' ref={statsRef}>
-          <div className='stat-item'>
-            <span className='stat-number'>100K+</span>
-            <span className='stat-label'>SQL Queries Analyzed</span>
-          </div>
-          <div className='stat-item'>
-            <span className='stat-number'>50+</span>
-            <span className='stat-label'>Databases Mapped</span>
-          </div>
-          <div className='stat-item'>
-            <span className='stat-number'>1000+</span>
-            <span className='stat-label'>Engineering Hours Saved</span>
+          <div className='impact-text'>
+            <span className='impact-number'>100K+</span> SQL Queries Analyzed<br />
+            <span className='impact-number'>50+</span> Databases Mapped<br />
+            <span className='impact-number'>1000+</span> Engineering Hours Saved
           </div>
         </div>
 
@@ -154,6 +147,7 @@ export const HomeHeroSection = () => {
                 src="/images/logos/databricks.png" 
                 alt="Databricks" 
                 className='logo'
+                style={{ transform: 'scale(1.5)' }}
                 onError={(e) => {
                   console.error('Failed to load Databricks logo');
                   console.log('Attempted path:', e.currentTarget.src);
