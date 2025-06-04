@@ -95,7 +95,7 @@ export const HomeHeroSection = () => {
 
         <div className='feature-points'>
           <div className='feature side-feature'>
-            <span className='feature-icon'>🔄</span>
+            <img src="/images/logos/data-warehouse.png" alt="Data Warehouse" className='feature-icon' />
             <span className='feature-title'>Auto-generated ERDs</span>
             <span className='feature-description'>
               Instantly visualize database relationships across your entire data stack.
@@ -109,7 +109,7 @@ export const HomeHeroSection = () => {
             </div>
           </div>
           <div className='feature central-feature'>
-            <span className='feature-icon'>🤖</span>
+            <img src="/images/logos/semantic-layer.png" alt="Semantic Layer" className='feature-icon semantic-layer-icon' />
             <span className='feature-title'>AI-ready Semantic Layer<span className='asterisk'>*</span></span>
             <span className='feature-description'>
               Turn your data stack into a knowledge graph for AI applications.
@@ -123,7 +123,7 @@ export const HomeHeroSection = () => {
             </div>
           </div>
           <div className='feature side-feature'>
-            <span className='feature-icon'>📝</span>
+            <img src="/images/logos/documentation.png" alt="SQL Documentation" className='feature-icon' />
             <span className='feature-title'>SQL Documentation</span>
             <span className='feature-description'>
               Automatically document and catalog your SQL code across all platforms.
@@ -217,19 +217,19 @@ export const HomeHeroSection = () => {
             <h3 className='beta-features-title'>Available in Beta:</h3>
             <ul className='features-list'>
               <li>
-                <span className='feature-icon'>📊</span>
+                <img src="/images/logos/auto.png" alt="Auto Generate" className='feature-icon beta-icon' />
                 Auto-generate ERDs on up to 20 tables
               </li>
               <li>
-                <span className='feature-icon'>🔗</span>
+                <img src="/images/logos/chain.png" alt="Link Tables" className='feature-icon beta-icon' />
                 Link 50 tables to ekai ERD engine
               </li>
               <li>
-                <span className='feature-icon'>⬇️</span>
+                <img src="/images/logos/export.png" alt="Export" className='feature-icon beta-icon' />
                 Export ERD as DBML or PNG
               </li>
               <li>
-                <span className='feature-icon'>📈</span>
+                <img src="/images/logos/profiles.png" alt="Data Profiles" className='feature-icon beta-icon' />
                 Generate data profiles and quality signals
               </li>
             </ul>
@@ -251,7 +251,7 @@ export const HomeHeroSection = () => {
           </div>
 
           <div className='cta-group'>
-            <a href="https://calendly.com/mo-ekai" target="_blank" rel="noopener noreferrer">
+            <a href="https://calendly.com/ozair-ekai/30min" target="_blank" rel="noopener noreferrer">
               <button className='secondary-button'>
                 <span className='button-text'>Request Full Access</span>
               </button>
