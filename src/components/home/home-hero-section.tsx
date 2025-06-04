@@ -1,5 +1,4 @@
 import { useEffect, useRef } from 'react';
-import { HashLink } from 'react-router-hash-link'
 import './home-hero-section.less'
 
 export const HomeHeroSection = () => {
