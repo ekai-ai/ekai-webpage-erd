@@ -336,7 +336,7 @@
 
       .integration-text {
         color: #888;
-        font-size: 1.1rem;
+        font-size: 1.2rem;
         margin-bottom: 2rem;
       }
 
@@ -344,18 +344,37 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 3rem;
+        gap: 2.2rem;
         flex-wrap: wrap;
 
         .logo {
-          height: 40px;
+          height: 44px;
+          width: auto;
+          object-fit: contain;
           opacity: 0.7;
-          transition: opacity 0.3s ease;
-          filter: grayscale(100%);
+          filter: grayscale(51%) brightness(0.8);
+          transition: filter 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+          position: relative;
 
-          &:hover {
+          &:nth-child(2) {
+            margin-right: 1.2rem;
+          }
+          &.databricks-logo {
+            margin-left: -3.25rem;
+            margin-right: -1.5rem;
+            transform: scale(0.75);
+          }
+          &.redshift-logo {
+            transform: scale(1.25);
+          }
+          &.postgres-logo {
+            margin-left: 1.25rem;
+            transform: scale(1.25);
+          }
+
+          &.logo-in-view {
+            filter: grayscale(0%) brightness(1);
             opacity: 1;
-            filter: none;
           }
         }
       }
@@ -469,6 +488,29 @@
           margin-right: 0.3em;
         }
       }
+    }
+
+    .asterisk {
+      font-size: 1.1em;
+      vertical-align: super;
+      color: #fdb918;
+      margin-left: 2px;
+      font-weight: 700;
+    }
+
+    .asterisk-explanation {
+      width: 100%;
+      max-width: 1320px;
+      margin: 1.5rem auto 0 auto;
+      font-size: 0.98rem;
+      color: #bbb;
+      text-align: center;
+      background: rgba(255,255,255,0.03);
+      border-radius: 8px;
+      padding: 1.1rem 1.5rem;
+      box-shadow: 0 2px 12px 0 rgba(253,185,24,0.04);
+      line-height: 1.6;
+      letter-spacing: 0.01em;
     }
   }
 

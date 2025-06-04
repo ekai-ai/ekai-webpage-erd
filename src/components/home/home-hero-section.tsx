@@ -5,6 +5,7 @@ import './home-hero-section.less'
 export const HomeHeroSection = () => {
   const contentRef = useRef<HTMLElement>(null)
   const statsRef = useRef<HTMLDivElement>(null)
+  const logoRefs = useRef<(HTMLImageElement | null)[]>([])
 
   useEffect(() => {
     const content = contentRef.current
@@ -27,6 +28,32 @@ export const HomeHeroSection = () => {
     if (statsRef.current) {
       observer.observe(statsRef.current)
     }
+
+    // Scroll-based logo color effect
+    const handleLogoScroll = () => {
+      const viewportCenter = window.innerHeight / 2;
+      logoRefs.current.forEach(logo => {
+        if (!logo) return;
+        const rect = logo.getBoundingClientRect();
+        const logoCenter = rect.top + rect.height / 2;
+        const distance = Math.abs(logoCenter - viewportCenter);
+        // Threshold: 200px from center is max grayscale (51%)
+        const threshold = 200;
+        let grayscale = Math.min(distance / threshold, 1) * 51;
+        grayscale = Math.max(0, Math.min(grayscale, 51));
+        logo.style.filter = `grayscale(${grayscale}%) brightness(${1 - (grayscale / 200)})`;
+        logo.style.opacity = `${1 - (grayscale / 100) * 0.3}`;
+      });
+    };
+
+    window.addEventListener('scroll', handleLogoScroll);
+    window.addEventListener('resize', handleLogoScroll);
+    setTimeout(handleLogoScroll, 100); // Initial call after mount
+
+    return () => {
+      window.removeEventListener('scroll', handleLogoScroll);
+      window.removeEventListener('resize', handleLogoScroll);
+    };
   }, [])
 
   return (
@@ -84,7 +111,7 @@ export const HomeHeroSection = () => {
           </div>
           <div className='feature central-feature'>
             <span className='feature-icon'>🤖</span>
-            <span className='feature-title'>AI-ready Semantic Layer</span>
+            <span className='feature-title'>AI-ready Semantic Layer<span className='asterisk'>*</span></span>
             <span className='feature-description'>
               Turn your data stack into a knowledge graph for AI applications.
               Instant context for LLMs and analytics.
@@ -112,6 +139,10 @@ export const HomeHeroSection = () => {
           </div>
         </div>
 
+        <div className='asterisk-explanation'>
+          <span className='asterisk'>*</span> At ekai, we define the semantic layer as knowledge that helps people understand the data they're working with - including the knowledge and expertise other people have about the data. Our mission is to make the collective knowledge of a data-driven organization available to everyone, so that anyone can get data-driven insights and make informed decisions.
+        </div>
+
         <div className='stats-section' ref={statsRef}>
           <div className='impact-text'>
             <span className='impact-number'>100K+</span> SQL Queries Analyzed<br />
@@ -129,6 +160,7 @@ export const HomeHeroSection = () => {
                 src="/images/logos/snowflake.png" 
                 alt="Snowflake" 
                 className='logo'
+                ref={el => (logoRefs.current[0] = el)}
                 onError={(e) => {
                   console.error('Failed to load Snowflake logo');
                   console.log('Attempted path:', e.currentTarget.src);
@@ -138,16 +170,17 @@ export const HomeHeroSection = () => {
                 src="/images/logos/bigquery.png" 
                 alt="BigQuery" 
                 className='logo'
+                ref={el => (logoRefs.current[1] = el)}
                 onError={(e) => {
                   console.error('Failed to load BigQuery logo');
                   console.log('Attempted path:', e.currentTarget.src);
                 }} 
               />
               <img 
-                src="/images/logos/databricks.png" 
+                src="/images/logos/databricks-med.png" 
                 alt="Databricks" 
-                className='logo'
-                style={{ transform: 'scale(1.5)' }}
+                className='logo databricks-logo'
+                ref={el => (logoRefs.current[2] = el)}
                 onError={(e) => {
                   console.error('Failed to load Databricks logo');
                   console.log('Attempted path:', e.currentTarget.src);
@@ -156,7 +189,8 @@ export const HomeHeroSection = () => {
               <img 
                 src="/images/logos/redshift.png" 
                 alt="Amazon Redshift" 
-                className='logo'
+                className='logo redshift-logo'
+                ref={el => (logoRefs.current[3] = el)}
                 onError={(e) => {
                   console.error('Failed to load Redshift logo');
                   console.log('Attempted path:', e.currentTarget.src);
@@ -165,7 +199,8 @@ export const HomeHeroSection = () => {
               <img 
                 src="/images/logos/postgres.png" 
                 alt="PostgreSQL" 
-                className='logo'
+                className='logo postgres-logo'
+                ref={el => (logoRefs.current[4] = el)}
                 onError={(e) => {
                   console.error('Failed to load PostgreSQL logo');
                   console.log('Attempted path:', e.currentTarget.src);
@@ -217,13 +252,13 @@ export const HomeHeroSection = () => {
           </div>
 
           <div className='cta-group'>
-            <HashLink to='/contact#waitlist'>
+            <a href="https://calendly.com/mo-ekai" target="_blank" rel="noopener noreferrer">
               <button className='secondary-button'>
                 <span className='button-text'>Request Full Access</span>
               </button>
-            </HashLink>
+            </a>
             <div className='sub-link'>
-              <a href="https://forms.gle/q3q1Fc3jjiwR9YPK7" className='waitlist-link' target="_blank" rel="noopener noreferrer">
+              <a href="https://forms.gle/swcmXWPerp5gzi5f6" className='waitlist-link' target="_blank" rel="noopener noreferrer">
                 Join the Waitlist →
               </a>
             </div>
