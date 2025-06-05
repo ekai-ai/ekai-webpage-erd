@@ -149,12 +149,19 @@ export const HomeHeroSection = () => {
         </div>
 
         <div className='stats-section' ref={statsRef}>
-          <div className='impact-text'>
-            <span className='impact-number'>100K+</span> SQL Queries Analyzed<br />
-            <span className='impact-number'>50+</span> Databases Mapped<br />
-            <span className='impact-number'>1000+</span> Engineering Hours Saved
-          </div>
-        </div>
+  <div className='impact-text'>
+    <div className='impact-line'>
+      <span className='impact-number'>100K+</span> SQL Queries Analyzed
+    </div>
+    <div className='impact-line'>
+      <span className='impact-number'>50+</span> Databases Mapped
+    </div>
+    <div className='impact-line'>
+      <span className='impact-number'>1000+</span> Engineering Hours Saved
+    </div>
+  </div>
+</div>
+
 
         {/* Integrations, Beta Tag, and Beta Features vertically centered */}
         <div>
@@ -216,7 +223,7 @@ export const HomeHeroSection = () => {
 
           <div className='beta-tag'>
             <span className='beta-icon'>🚀</span>
-            <span>Beta Launch Now Live</span>
+            <span>Beta Launches Soon</span>
           </div>
 
           <div className='beta-features'>
