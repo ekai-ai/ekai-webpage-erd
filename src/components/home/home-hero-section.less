@@ -139,8 +139,6 @@
       }
     }
 
-    .beta-section-wrapper {
-    }
     .beta-tag {
       display: inline-flex;
       align-items: center;
@@ -274,8 +272,10 @@
 
     .cta-section {
       display: flex;
-      gap: 2rem;
+      flex-direction: column;
+      align-items: center;
       justify-content: center;
+      gap: 2rem;
       margin-top: 2.5rem;
       margin-bottom: 1.5rem;
 
@@ -462,19 +462,22 @@
     }
 
     .docs-link {
-      margin-top: 2rem;
+      margin-top: -1rem;
       text-align: center;
-      .read-docs {
+      display: block;
+      color: #bbb;
+      font-size: 1.1rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
+      &:hover {
+        background: rgba(253, 185, 24, 0.1);
+        text-decoration: underline;
         color: #fdb918;
-        font-size: 1.1rem;
-        text-decoration: none;
-        transition: all 0.3s ease;
-        padding: 0.5rem 1rem;
-        border-radius: 4px;
-        &:hover {
-          background: rgba(253, 185, 24, 0.1);
-          text-decoration: underline;
-        }
       }
     }
 

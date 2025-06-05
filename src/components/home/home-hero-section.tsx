@@ -61,7 +61,7 @@ export const HomeHeroSection = () => {
         <img src="/images/logos/ekai-logo.svg" alt="ekai" className='ekai-logo' />
       </div>
       <div className='nav-buttons'>
-        <a href="https://dev.ekai.ai" className='nav-button try-beta-button' target="_blank" rel="noopener noreferrer">Try Beta</a>
+        <a href="https://forms.gle/swcmXWPerp5gzi5f6" className='nav-button try-beta-button' target="_blank" rel="noopener noreferrer">Access Beta</a>
       </div>
       <div className='code-background'></div>
       <div className='hero-container'>
@@ -157,7 +157,7 @@ export const HomeHeroSection = () => {
         </div>
 
         {/* Integrations, Beta Tag, and Beta Features vertically centered */}
-        <div className='beta-section-wrapper'>
+        <div>
           <div className='integrations'>
             <p className='integration-text'>Works with your data stack</p>
             <div className='integration-logos'>
@@ -243,31 +243,25 @@ export const HomeHeroSection = () => {
         </div>
 
         <div className='cta-section'>
-          <div className='cta-group'>
-            <a href="https://dev.ekai.ai" target="_blank" rel="noopener noreferrer">
-              <button className='primary-button'>
-                <span className='button-text'>Try Beta</span>
-              </button>
-            </a>
-            <div className='sub-link'>
-              <a href="/docs" className='docs-link'>
-                Read the Docs →
+          <div style={{ display: 'flex', flexDirection: 'row', gap: '2rem', justifyContent: 'center', alignItems: 'center' }}>
+            <div className='cta-group'>
+              <a href="https://forms.gle/swcmXWPerp5gzi5f6" target="_blank" rel="noopener noreferrer">
+                <button className='primary-button'>
+                  <span className='button-text'>Access Beta</span>
+                </button>
+              </a>
+            </div>
+            <div className='cta-group'>
+              <a href="https://calendly.com/ozair-ekai/30min" target="_blank" rel="noopener noreferrer">
+                <button className='secondary-button'>
+                  <span className='button-text'>Request Full Access</span>
+                </button>
               </a>
             </div>
           </div>
-
-          <div className='cta-group'>
-            <a href="https://calendly.com/ozair-ekai/30min" target="_blank" rel="noopener noreferrer">
-              <button className='secondary-button'>
-                <span className='button-text'>Request Full Access</span>
-              </button>
-            </a>
-            <div className='sub-link'>
-              <a href="https://forms.gle/swcmXWPerp5gzi5f6" className='waitlist-link' target="_blank" rel="noopener noreferrer">
-                Join the Waitlist →
-              </a>
-            </div>
-          </div>
+          <a href="https://docs.ekai.ai/" className='docs-link' target="_blank" rel="noopener noreferrer">
+            Read the Docs →
+          </a>
         </div>
 
         <div className='footer-info'>
@@ -279,7 +273,7 @@ export const HomeHeroSection = () => {
             <span className='separator'>|</span>
             <span className='location-text'>
               <span className='location-icon'>📍</span>
-              Based in Kendall Square, Cambridge, MA
+              Based in Boston, USA
             </span>
           </div>
         </div>
