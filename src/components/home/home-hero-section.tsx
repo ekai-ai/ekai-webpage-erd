@@ -78,18 +78,24 @@ export const HomeHeroSection = () => {
 
         <div className='transformation-visual'>
           <div className='visual-item start'>
-            <div className='icon'>📊</div>
-            <span>Raw Data</span>
+            <div className='icon'>
+              <img src="/images/logos/raw-data.png" alt="Raw Data" className="transformation-icon raw-data-icon" />
+            </div>
+            <span className="transformation-label">Raw Data</span>
           </div>
           <div className='arrow'>→</div>
           <div className='visual-item process'>
-            <div className='icon'>⚡</div>
-            <span>EKAI</span>
+            <div className='icon'>
+              <img src="/images/logos/ekai-logo.svg" alt="ekai" className="transformation-icon ekai-logo-icon" />
+            </div>
+            <span className="transformation-label">ekai</span>
           </div>
           <div className='arrow'>→</div>
           <div className='visual-item end'>
-            <div className='icon'>🧠</div>
-            <span>Semantic Layer</span>
+            <div className='icon'>
+              <img src="/images/logos/semantic-layer.png" alt="Semantic Layer" className="transformation-icon semantic-layer-icon" />
+            </div>
+            <span className="transformation-label">Semantic Layer</span>
           </div>
         </div>
 
