@@ -101,7 +101,7 @@ export const HomeHeroSection = () => {
 
         <div className='feature-points'>
           <div className='feature side-feature'>
-            <img src="/images/logos/data-warehouse.png" alt="Data Warehouse" className='feature-icon' />
+            <img src="/images/logos/auto2.png" alt="Data Warehouse" className='feature-icon' />
             <span className='feature-title'>Auto-generated ERDs</span>
             <span className='feature-description'>
               Instantly visualize database relationships across your entire data stack.
@@ -115,7 +115,7 @@ export const HomeHeroSection = () => {
             </div>
           </div>
           <div className='feature central-feature'>
-            <img src="/images/logos/semantic-layer.png" alt="Semantic Layer" className='feature-icon semantic-layer-icon' />
+            <img src="/images/logos/semantic-layer2.png" alt="Semantic Layer" className='feature-icon semantic-layer-icon' />
             <span className='feature-title'>AI-ready Semantic Layer<span className='asterisk'>*</span></span>
             <span className='feature-description'>
               Turn your data stack into a knowledge graph for AI applications.
@@ -129,7 +129,7 @@ export const HomeHeroSection = () => {
             </div>
           </div>
           <div className='feature side-feature'>
-            <img src="/images/logos/documentation.png" alt="SQL Documentation" className='feature-icon' />
+            <img src="/images/logos/documentation2.png" alt="SQL Documentation" className='feature-icon' />
             <span className='feature-title'>SQL Documentation</span>
             <span className='feature-description'>
               Automatically document and catalog your SQL code across all platforms.
@@ -266,9 +266,14 @@ export const HomeHeroSection = () => {
               </a>
             </div>
           </div>
-          <a href="https://docs.ekai.ai/" className='docs-link' target="_blank" rel="noopener noreferrer">
-            Read the Docs →
-          </a>
+          <div className='sub-link'>
+            <span 
+              className='docs-link disabled'
+              title="Documentation coming soon"
+            >
+              Read the Docs →
+            </span>
+          </div>
         </div>
 
         <div className='footer-info'>
@@ -280,7 +285,7 @@ export const HomeHeroSection = () => {
             <span className='separator'>|</span>
             <span className='location-text'>
               <span className='location-icon'>📍</span>
-              Based in Boston, USA
+              Based in Kendall Square, Cambridge, MA
             </span>
           </div>
         </div>

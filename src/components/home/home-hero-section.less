@@ -465,7 +465,7 @@
       margin-top: -1rem;
       text-align: center;
       display: block;
-      color: #bbb;
+      color: rgba(187, 187, 187, 0.6);
       font-size: 1.1rem;
       text-decoration: none;
       transition: all 0.3s ease;
@@ -474,10 +474,20 @@
       width: fit-content;
       margin-left: auto;
       margin-right: auto;
+      cursor: default;
+
       &:hover {
-        background: rgba(253, 185, 24, 0.1);
-        text-decoration: underline;
-        color: #fdb918;
+        background: rgba(255, 255, 255, 0.03);
+        color: rgba(187, 187, 187, 0.7);
+      }
+
+      &.disabled {
+        opacity: 0.8;
+        position: relative;
+        
+        &:hover {
+          background: rgba(255, 255, 255, 0.03);
+        }
       }
     }
 
