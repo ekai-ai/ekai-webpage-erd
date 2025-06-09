@@ -227,7 +227,7 @@ export const HomeHeroSection = () => {
           </div>
 
           <div className='beta-features'>
-            <h3 className='beta-features-title'>Available in Beta:</h3>
+            <h3 className='beta-features-title'>Features</h3>
             <ul className='features-list'>
               <li>
                 <img src="/images/logos/auto.png" alt="Auto Generate" className='feature-icon beta-icon' />
