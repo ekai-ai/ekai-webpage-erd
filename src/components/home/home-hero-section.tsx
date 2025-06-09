@@ -231,11 +231,11 @@ export const HomeHeroSection = () => {
             <ul className='features-list'>
               <li>
                 <img src="/images/logos/auto.png" alt="Auto Generate" className='feature-icon beta-icon' />
-                Auto-generate ERDs on up to 20 tables
+                Auto-generate Entity Relationship Diagrams (ERDs)
               </li>
               <li>
                 <img src="/images/logos/chain.png" alt="Link Tables" className='feature-icon beta-icon' />
-                Link 50 tables to ekai ERD engine
+                Link thousands of tables to ekai ERD engine
               </li>
               <li>
                 <img src="/images/logos/export.png" alt="Export" className='feature-icon beta-icon' />
