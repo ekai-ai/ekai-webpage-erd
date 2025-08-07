@@ -223,7 +223,7 @@ export const HomeHeroSection = () => {
 
           <div className='beta-tag'>
             <span className='beta-icon'>🚀</span>
-            <span>Beta Launches Soon</span>
+            <span>Access Beta Now</span>
           </div>
 
           <div className='beta-features'>
