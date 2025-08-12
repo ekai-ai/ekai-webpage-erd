@@ -1,10 +1,12 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import './home-hero-section.less'
+import { RequestAccessPopup } from './request-access-popup';
 
 export const HomeHeroSection = () => {
   const contentRef = useRef<HTMLElement>(null)
   const statsRef = useRef<HTMLDivElement>(null)
   const logoRefs = useRef<(HTMLImageElement | null)[]>([])
+  const [isPopupOpen, setIsPopupOpen] = useState(false)
 
   useEffect(() => {
     const content = contentRef.current
@@ -259,11 +261,12 @@ export const HomeHeroSection = () => {
               </a>
             </div>
             <div className='cta-group'>
-              <a href="https://calendly.com/ozair-ekai/30min" target="_blank" rel="noopener noreferrer">
-                <button className='secondary-button'>
-                  <span className='button-text'>Request Full Access</span>
-                </button>
-              </a>
+              <button 
+                className='secondary-button'
+                onClick={() => setIsPopupOpen(true)}
+              >
+                <span className='button-text'>Request Full Access</span>
+              </button>
             </div>
           </div>
           <div className='sub-link'>
@@ -290,6 +293,11 @@ export const HomeHeroSection = () => {
           </div>
         </div>
       </div>
+      
+      <RequestAccessPopup 
+        isOpen={isPopupOpen}
+        onClose={() => setIsPopupOpen(false)}
+      />
     </section>
   )
 } 
