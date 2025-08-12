@@ -119,7 +119,7 @@ export const RequestAccessPopup = ({ isOpen, onClose }: RequestAccessPopupProps)
 
       // For local development, use localhost endpoint if in dev mode
       const API_ENDPOINT = import.meta.env.DEV
-        ? 'https://ivn7l6cm2cvuqrxygyjcphylwq0qpnzh.lambda-url.us-east-2.on.aws/send-email-v2'
+        ? 'http://localhost:3300/send-email-v2'
         : import.meta.env.VITE_CONTACT_API_URL;
 
       // In development mode, log the endpoint and payload for debugging
@@ -192,8 +192,7 @@ export const RequestAccessPopup = ({ isOpen, onClose }: RequestAccessPopupProps)
             <p>We'll get back to you shortly.</p>
           </div>
         ) : (
-          <form className="popup-form" onSubmit={handleSubmit}   onKeyDown={(e) => e.key === 'Enter' && e.preventDefault()}
->
+          <form className="popup-form" onSubmit={handleSubmit} onKeyDown={(e) => e.key === 'Enter' && e.preventDefault()}>
             <div className="form-group">
               <label htmlFor="name" className="form-label">
                 Name <span className="required">*</span>
