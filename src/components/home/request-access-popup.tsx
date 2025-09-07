@@ -182,7 +182,7 @@ export const RequestAccessPopup = ({ isOpen, onClose }: RequestAccessPopupProps)
         </button>
         
         <div className="popup-header">
-          <h2 className="popup-title">Request Full Access</h2>
+          <h2 className="popup-title">Request A Demo</h2>
         </div>
 
         {submitStatus === 'success' ? (
@@ -333,7 +333,7 @@ export const RequestAccessPopup = ({ isOpen, onClose }: RequestAccessPopupProps)
             className={`submit-button ${submitStatus === 'error' ? 'error' : ''}`}
             disabled={isSubmitting}
           >
-            {isSubmitting ? 'Sending...' : submitStatus === 'error' ? 'Somehthing went wrong. Please try again later.' : 'Request Access'}
+            {isSubmitting ? 'Sending...' : submitStatus === 'error' ? 'Somehthing went wrong. Please try again later.' : 'Request Demo'}
           </button>
         </form>
         )}

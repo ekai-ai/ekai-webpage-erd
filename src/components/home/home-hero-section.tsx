@@ -63,7 +63,7 @@ export const HomeHeroSection = () => {
         <img src="/images/logos/ekai-logo.svg" alt="ekai" className='ekai-logo' />
       </div>
       <div className='nav-buttons'>
-        <a href="https://forms.gle/swcmXWPerp5gzi5f6" className='nav-button try-beta-button' target="_blank" rel="noopener noreferrer">Access Beta</a>
+        <a href="https://forms.gle/swcmXWPerp5gzi5f6" className='nav-button try-beta-button' target="_blank" rel="noopener noreferrer">Book A Demo</a>
       </div>
       <div className='code-background'></div>
       <div className='hero-container'>
@@ -225,7 +225,7 @@ export const HomeHeroSection = () => {
 
           <div className='beta-tag'>
             <span className='beta-icon'>🚀</span>
-            <span>Access Beta Now</span>
+            <span>Book A Demo Now</span>
           </div>
 
           <div className='beta-features'>
@@ -256,7 +256,7 @@ export const HomeHeroSection = () => {
             <div className='cta-group'>
               <a href="https://forms.gle/swcmXWPerp5gzi5f6" target="_blank" rel="noopener noreferrer">
                 <button className='primary-button'>
-                  <span className='button-text'>Access Beta</span>
+                  <span className='button-text'>Book A Demo</span>
                 </button>
               </a>
             </div>
@@ -265,7 +265,7 @@ export const HomeHeroSection = () => {
                 className='secondary-button'
                 onClick={() => setIsPopupOpen(true)}
               >
-                <span className='button-text'>Request Full Access</span>
+                <span className='button-text'>Request Demo</span>
               </button>
             </div>
           </div>
